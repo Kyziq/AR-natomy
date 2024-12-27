@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>3D Anatomy Viewer</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ffffff;
+      }
+      model-viewer {
+        width: 100%;
+        height: 100vh;
+      }
+      .hotspot {
+        background: rgba(255, 0, 0, 0.7);
+        border: none;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      }
+      /* Tooltip styling */
+      .tooltip {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 6px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        transform: translate(-50%, -100%);
+        opacity: 0;
+        transition: opacity 0.2s;
+        pointer-events: none;
+      }
+      .hotspot:active + .tooltip,
+      .hotspot:hover + .tooltip {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <model-viewer
+      id="modelViewer"
+      src="assets/models/human_heart.glb"
+      alt="3D Human Heart Model"
+      ar
+      camera-controls
+      auto-rotate
+      background-color="transparent"
+    >
+      <!-- Left Atrium Hotspot -->
+      <button slot="hotspot-leftAtrium" class="hotspot"></button>
+      <div class="tooltip" slot="tooltip-leftAtrium">
+        Left Atrium: Receives oxygenated blood from the lungs.
+      </div>
+
+      <!-- Right Atrium Hotspot -->
+      <button slot="hotspot-rightAtrium" class="hotspot"></button>
+      <div class="tooltip" slot="tooltip-rightAtrium">
+        Right Atrium: Receives deoxygenated blood from the body.
+      </div>
+    </model-viewer>
+
+    <script>
+      // Define hotspots with positions in 3D space
+      const modelViewer = document.getElementById("modelViewer");
+
+      modelViewer.addEventListener("load", () => {
+        // Example positions; adjust these to match your model
+        modelViewer.setAttribute(
+          "hotspot-leftAtrium",
+          `
+        position: 0.1m 0.2m 0.3m
+      `
+        );
+        modelViewer.setAttribute(
+          "hotspot-rightAtrium",
+          `
+        position: -0.1m 0.2m 0.3m
+      `
+        );
+      });
+
+      // Handle hotspot clicks
+      modelViewer.addEventListener("click", (event) => {
+        const target = event.target;
+        if (target.classList.contains("hotspot")) {
+          const tooltip = target.nextElementSibling;
+          alert(tooltip.textContent);
+        }
+      });
+    </script>
+  </body>
+</html>
