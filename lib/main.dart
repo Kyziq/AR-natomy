@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
+import 'menu.dart';
 
 void main() {
   runApp(const ARnatomyApp());
@@ -32,7 +33,7 @@ class ARnatomyApp extends StatelessWidget {
           backgroundColor: Colors.blueAccent,
         ),
       ),
-      home: const ModelViewerScreen(),
+      home: const MenuPage(),
     );
   }
 }
