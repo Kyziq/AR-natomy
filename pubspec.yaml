@@ -1,5 +1,5 @@
-name: ar_natomy
-description: "A new Flutter project."
+name: arnatomy
+description: "An augmented reality application for interactive 3D anatomy visualization and learning."
 publish_to: "none"
 version: 0.1.0
 

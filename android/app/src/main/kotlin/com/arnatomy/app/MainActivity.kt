@@ -1,4 +1,4 @@
-package com.example.ar_natomy
+package com.arnatomy.app
 
 import io.flutter.embedding.android.FlutterActivity
 
