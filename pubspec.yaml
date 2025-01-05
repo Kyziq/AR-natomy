@@ -20,12 +20,11 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    # - assets/models/human_heart.glb
-    - assets/models/realistic_human_heart.glb
-    - assets/models/skeleton.glb
-    - assets/models/muscle_anatomy.glb
-    - assets/models/lymphatic_system_overview.glb
-    - assets/models/skeleton.glb
+    - assets/models/human_heart.glb
+    - assets/models/skeletal_system.glb
+    - assets/models/muscular_system.glb
+    - assets/models/lymphatic_system.glb
+
     - assets/heart_hotspots.html
     - assets/heart_styles.css
     - assets/heart_interactions.js

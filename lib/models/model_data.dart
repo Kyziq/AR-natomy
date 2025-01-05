@@ -18,38 +18,38 @@ class ModelData {
     return [
       ModelData(
         name: 'Human Heart',
-        path: 'assets/models/realistic_human_heart.glb',
+        path: 'assets/models/human_heart.glb',
         description:
-            'Interactive 3D model of the human heart with detailed annotations.',
+            'Main organ of human cardiovascular system, a network of blood vessels that pumps blood throughout your body.',
         hasHotspots: true,
         partInfo: {
           'Left Ventricle':
-              'The left ventricle is the main pumping chamber of the heart that supplies blood to the rest of the body.',
+              'The main pumping chamber of the heart that supplies blood to the rest of the body.',
           'Right Ventricle':
-              'The right ventricle pumps blood to the lungs where it picks up oxygen.',
+              'Pumps blood to the lungs where it picks up oxygen.',
           'Left Atrium':
-              'The left atrium receives oxygenated blood from the lungs.',
+              'Receives oxygenated blood from the lungs.',
           'Right Atrium':
-              'The right atrium receives deoxygenated blood from the body.',
+              'Receives deoxygenated blood from the body.',
           'Aorta':
-              'The aorta is the largest artery that carries oxygenated blood from the left ventricle to the rest of the body.',
+              'Largest artery that carries oxygenated blood from the left ventricle to the rest of the body.',
         },
       ),
       ModelData(
-        name: 'Skeleton',
-        path: 'assets/models/skeleton.glb',
+        name: 'Skeletal System',
+        path: 'assets/models/skeletal_system.glb',
         description:
-            'The skeleton provides structure and protection to the body.',
+            'Your body\'s support structure. Its parts include your bones, muscles, cartilage and connective tissue like ligaments and tendons.',
       ),
       ModelData(
-        name: 'Muscle Anatomy',
-        path: 'assets/models/muscle_anatomy.glb',
-        description: 'Detailed view of human muscular system.',
+        name: 'Muscular System',
+        path: 'assets/models/muscular_system.glb',
+        description: 'An organ system consisting of skeletal, smooth, and cardiac muscle.',
       ),
       ModelData(
         name: 'Lymphatic System',
-        path: 'assets/models/lymphatic_system_overview.glb',
-        description: 'Overview of the lymphatic system and immune responses.',
+        path: 'assets/models/lymphatic_system.glb',
+        description: 'A group of organs, vessels and tissues that protect you from infection and keep a healthy balance of fluids throughout your body..',
       ),
     ];
   }
