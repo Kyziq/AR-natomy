@@ -25,23 +25,10 @@ class MenuScreen extends StatelessWidget {
             margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
             child: ListTile(
               contentPadding: const EdgeInsets.all(16.0),
-              leading: Container(
-                width: 48,
-                height: 48,
-                decoration: BoxDecoration(
-                  color: Colors.blue.withAlpha(25),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Icon(
-                  Icons.extension,
-                  color: Colors.blue[700],
-                  size: 24,
-                ),
-              ),
               title: Text(
                 model.name,
                 style: const TextStyle(
-                  fontSize: 18,
+                  fontSize: 14,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -51,7 +38,7 @@ class MenuScreen extends StatelessWidget {
                   model.description,
                   style: TextStyle(
                     color: Colors.grey[600],
-                    fontSize: 14,
+                    fontSize: 12,
                   ),
                 ),
               ),
